@@ -1,0 +1,1 @@
+shield_id = noone;

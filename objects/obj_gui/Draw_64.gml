@@ -1,0 +1,1 @@
+draw_healthbar(16, 16, 80, 32, obj_sparkman.char_health, c_black, c_red, c_lime, 0, true, true);
