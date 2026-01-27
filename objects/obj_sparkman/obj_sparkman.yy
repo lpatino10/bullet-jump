@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sparkman",
-    "path":"sprites/spr_sparkman/spr_sparkman.yy",
+    "name":"spr_sparkman_idle",
+    "path":"sprites/spr_sparkman_idle/spr_sparkman_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

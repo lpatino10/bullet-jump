@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Bullet Jump",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -77,7 +77,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"Bullet Jump",
   "resources":[
@@ -387,11 +387,15 @@
     {"id":{"name":"InputVirtualDestroyAll","path":"scripts/InputVirtualDestroyAll/InputVirtualDestroyAll.yy",},},
     {"id":{"name":"InputX","path":"scripts/InputX/InputX.yy",},},
     {"id":{"name":"InputY","path":"scripts/InputY/InputY.yy",},},
+    {"id":{"name":"snd_music","path":"sounds/snd_music/snd_music.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_full_shield","path":"sprites/spr_full_shield/spr_full_shield.yy",},},
     {"id":{"name":"spr_half_shield","path":"sprites/spr_half_shield/spr_half_shield.yy",},},
-    {"id":{"name":"spr_sparkman","path":"sprites/spr_sparkman/spr_sparkman.yy",},},
+    {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
+    {"id":{"name":"spr_sparkman_charged","path":"sprites/spr_sparkman_charged/spr_sparkman_charged.yy",},},
+    {"id":{"name":"spr_sparkman_idle","path":"sprites/spr_sparkman_idle/spr_sparkman_idle.yy",},},
+    {"id":{"name":"spr_sparkman_jumping","path":"sprites/spr_sparkman_jumping/spr_sparkman_jumping.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

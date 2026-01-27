@@ -1,18 +1,43 @@
 var move_x = InputX(INPUT_CLUSTER.NAVIGATION);
 var move_y = InputY(INPUT_CLUSTER.NAVIGATION);
 
-// Handle jump button.
-if (InputPressed(INPUT_VERB.JUMP)) {
+// Handle flicker during invulnerability.
+if (is_invulverable) {
+	flicker_step_counter += 1;
+	
+	if (flicker_step_counter == flicker_step_period) {
+		if (image_alpha == 0) {
+			image_alpha = 1;
+		} else {
+			image_alpha = 0;
+		}
+
+		flicker_step_counter = 0;
+	}
+} else {
+	image_alpha = 1;
+}
+
+// Handle hold animation.
+if (InputCheck(INPUT_VERB.JUMP)) {
+	sprite_index = spr_sparkman_charged;
+}
+
+// Handle jump action.
+if (InputReleased(INPUT_VERB.JUMP)) {
 	if (is_jumping || (move_x == 0 && move_y == 0)) {
+		sprite_index = spr_sparkman_idle;
 		return;	
 	}
 
+	sprite_index = spr_sparkman_jumping;
 	char_speed = 10;
 	is_jumping = true;
+	jump_start_x = x;
+	jump_start_y = y;
 	saved_move_x = move_x;
 	saved_move_y = move_y;
-	
-	time_source_start(timer);
+
 	
 	if (obj_sparkman.curr_anchor_bullet == noone) {
 		obj_sparkman.jumped_from = noone;
@@ -42,4 +67,7 @@ if ((is_jumping && jumped_from != noone) || place_free(final_x, final_y)) {
 	y = final_y;
 }
 
-move_wrap(true, true, 0);
+// Stop jumping if we've jumped past threshold.
+if (is_jumping && point_distance(jump_start_x, jump_start_y, x, y) > jump_end_threshold) {
+	finish_jump();
+}

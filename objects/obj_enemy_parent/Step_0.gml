@@ -5,6 +5,6 @@ if (place_meeting(x, y, obj_sparkman)) {
 			instance_destroy(shield_id);
 		}
 	} else {
-		obj_sparkman.char_health -= 1;
+		obj_sparkman.damage();
 	}
 }

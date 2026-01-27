@@ -1,1 +1,5 @@
-draw_healthbar(16, 16, 80, 32, obj_sparkman.char_health, c_black, c_red, c_lime, 0, true, true);
+var space = 6;
+
+for (var i = 0; i < obj_sparkman.char_lives; i++) {
+	draw_sprite(spr_heart, 0, 16 + (16 * i) + (space * i), 16);	
+}

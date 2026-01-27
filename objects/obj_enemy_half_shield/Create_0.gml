@@ -1,7 +1,4 @@
-shield_id = instance_create_layer(x, y, "Instances", obj_half_shield, {
-	image_xscale: 3,
-	image_yscale: 3,
-});
+shield_id = instance_create_layer(x, y, "Instances", obj_half_shield);
 
 create_bullet = function(bullet_speed) {
 	instance_create_layer(x, y, "Instances", obj_bullet, {
