@@ -61,8 +61,24 @@ if (curr_anchor_bullet != noone) {
 	final_y = y + move_y * char_speed;
 }
 
-// Ignore collisions only if player is jumping from a bullet.
-if ((is_jumping && jumped_from != noone) || place_free(final_x, final_y)) {
+// Player should always collide with walls and stop jumping.
+// If player is jumping FROM A BULLET, they should go through shields.
+// Otherwise, they should collide with shields.
+var is_colliding_with_wall = place_meeting(final_x, final_y, obj_game.collision_tiles_id);
+var is_colliding_with_shield = place_meeting(final_x, final_y, [obj_half_shield, obj_full_shield]);
+
+if (is_colliding_with_wall) {
+	if (is_jumping) {
+		finish_jump();
+	}
+} else if (is_colliding_with_shield) {
+	if (is_jumping && jumped_from != noone) {
+		x = final_x;
+		y = final_y;
+	} else if (is_jumping) {
+		finish_jump();
+	}
+} else {
 	x = final_x;
 	y = final_y;
 }
