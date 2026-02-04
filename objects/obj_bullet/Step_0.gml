@@ -1,5 +1,11 @@
 if (place_meeting(x, y, obj_game.collision_tiles_id)) {
+	if (obj_sparkman.curr_anchor_bullet == id) {
+		obj_sparkman.curr_anchor_bullet = noone;
+		obj_sparkman.stun();
+	}
+
 	instance_destroy();
+	return;
 }
 
 if (place_meeting(x, y, obj_sparkman)) {

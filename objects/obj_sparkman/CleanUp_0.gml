@@ -1,1 +1,2 @@
 time_source_destroy(invul_end_time_source_id);
+time_source_destroy(stun_end_time_source_id);

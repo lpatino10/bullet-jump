@@ -1,6 +1,3 @@
-var move_x = InputX(INPUT_CLUSTER.NAVIGATION);
-var move_y = InputY(INPUT_CLUSTER.NAVIGATION);
-
 // Handle flicker during invulnerability.
 if (is_invulverable) {
 	flicker_step_counter += 1;
@@ -17,6 +14,14 @@ if (is_invulverable) {
 } else {
 	image_alpha = 1;
 }
+
+// While stunned, player can't do anything.
+if (is_stunned) {
+	return;
+}
+
+var move_x = InputX(INPUT_CLUSTER.NAVIGATION);
+var move_y = InputY(INPUT_CLUSTER.NAVIGATION);
 
 // Handle hold animation.
 if (InputCheck(INPUT_VERB.JUMP)) {
@@ -70,6 +75,7 @@ var is_colliding_with_shield = place_meeting(final_x, final_y, [obj_half_shield,
 if (is_colliding_with_wall) {
 	if (is_jumping) {
 		finish_jump();
+		stun();
 	}
 } else if (is_colliding_with_shield) {
 	if (is_jumping && jumped_from != noone) {
@@ -77,6 +83,7 @@ if (is_colliding_with_wall) {
 		y = final_y;
 	} else if (is_jumping) {
 		finish_jump();
+		stun();
 	}
 } else {
 	x = final_x;
