@@ -11,6 +11,8 @@ jump_start_y = 0;
 saved_move_x = 0;
 saved_move_y = 0;
 
+is_melee_active = false;
+
 is_stunned = false;
 stun_end_time_source_id = time_source_create(time_source_global, 1, time_source_units_seconds, function () {
 	sprite_index = spr_sparkman_idle;
@@ -20,7 +22,6 @@ stun_end_time_source_id = time_source_create(time_source_global, 1, time_source_
 is_invulverable = false;
 flicker_step_period = 5;
 flicker_step_counter = 0;
-
 invul_end_time_source_id = time_source_create(time_source_global, 3, time_source_units_seconds, function () {
 	is_invulverable = false;
 });
@@ -48,4 +49,14 @@ stun = function () {
 	sprite_index = spr_sparkman_stunned;
 	is_stunned = true;
 	time_source_start(stun_end_time_source_id);
+}
+
+start_melee = function () {
+	sprite_index = spr_sparkman_melee;
+	is_melee_active = true;
+}
+
+end_melee = function () {
+	sprite_index = spr_sparkman_idle;
+	is_melee_active = false;
 }

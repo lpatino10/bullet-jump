@@ -397,6 +397,7 @@
     {"id":{"name":"spr_sparkman_charged","path":"sprites/spr_sparkman_charged/spr_sparkman_charged.yy",},},
     {"id":{"name":"spr_sparkman_idle","path":"sprites/spr_sparkman_idle/spr_sparkman_idle.yy",},},
     {"id":{"name":"spr_sparkman_jumping","path":"sprites/spr_sparkman_jumping/spr_sparkman_jumping.yy",},},
+    {"id":{"name":"spr_sparkman_melee","path":"sprites/spr_sparkman_melee/spr_sparkman_melee.yy",},},
     {"id":{"name":"spr_sparkman_stunned","path":"sprites/spr_sparkman_stunned/spr_sparkman_stunned.yy",},},
     {"id":{"name":"spr_walls","path":"sprites/spr_walls/spr_walls.yy",},},
     {"id":{"name":"ts_floors","path":"tilesets/ts_floors/ts_floors.yy",},},
