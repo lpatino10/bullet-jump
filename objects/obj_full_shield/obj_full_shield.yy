@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_full_shield",
-    "path":"sprites/spr_full_shield/spr_full_shield.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

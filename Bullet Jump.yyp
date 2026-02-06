@@ -391,8 +391,6 @@
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_floors","path":"sprites/spr_floors/spr_floors.yy",},},
-    {"id":{"name":"spr_full_shield","path":"sprites/spr_full_shield/spr_full_shield.yy",},},
-    {"id":{"name":"spr_half_shield","path":"sprites/spr_half_shield/spr_half_shield.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_sparkman_charged","path":"sprites/spr_sparkman_charged/spr_sparkman_charged.yy",},},
     {"id":{"name":"spr_sparkman_idle","path":"sprites/spr_sparkman_idle/spr_sparkman_idle.yy",},},

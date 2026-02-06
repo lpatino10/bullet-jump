@@ -1,5 +1,3 @@
-shield_id = instance_create_layer(x, y, "Instances", obj_full_shield);
-
 active_bullet_ids = [];
 
 create_bullet = function (bullet_x, bullet_y, bullet_direction) {
