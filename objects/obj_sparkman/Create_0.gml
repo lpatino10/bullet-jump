@@ -11,8 +11,6 @@ jump_start_y = 0;
 saved_move_x = 0;
 saved_move_y = 0;
 
-is_melee_active = false;
-
 is_stunned = false;
 stun_end_time_source_id = time_source_create(time_source_global, 1, time_source_units_seconds, function () {
 	sprite_index = spr_sparkman_idle;
@@ -26,6 +24,7 @@ invul_end_time_source_id = time_source_create(time_source_global, 3, time_source
 	is_invulverable = false;
 });
 
+// TODO: Handle this with a more dynamic animation + animation end event?
 finish_jump = function () {
 	sprite_index = spr_sparkman_idle;
 	char_speed = 5;
@@ -49,14 +48,4 @@ stun = function () {
 	sprite_index = spr_sparkman_stunned;
 	is_stunned = true;
 	time_source_start(stun_end_time_source_id);
-}
-
-start_melee = function () {
-	sprite_index = spr_sparkman_melee;
-	is_melee_active = true;
-}
-
-end_melee = function () {
-	sprite_index = spr_sparkman_idle;
-	is_melee_active = false;
 }

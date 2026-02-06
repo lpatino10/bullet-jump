@@ -52,11 +52,6 @@ if (InputReleased(INPUT_VERB.JUMP)) {
 	}
 }
 
-// Handle melee.
-if (InputPressed(INPUT_VERB.SPECIAL)) {
-	start_melee();
-}
-
 var final_x;
 var final_y;
 
